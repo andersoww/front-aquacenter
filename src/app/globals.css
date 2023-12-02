@@ -56,6 +56,11 @@
   animation: scroll 30s linear infinite;
 }
 
+.polygon {
+  clip-path: polygon(100% 0%, 100% 10%, 100% 100%, 0 99%, 5% 48%, 0 0);
+  @apply border-l-white;
+}
+
 @keyframes scroll {
   to {
     transform: translate(calc(-50% - 0.5rem));

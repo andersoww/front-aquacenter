@@ -2,11 +2,13 @@
 
 import { BrandAnimation } from "@/components/BrandAnimation";
 import { Footer } from "@/components/Footer";
-import Image from "next/image";
+import { NavBar } from "@/components/NavBar";
+import { Image } from "next/image";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">
+      <NavBar />
       <section className="w-full flex justify-center bg-[#F8F8F8]">
         <div className="max-w-5xl flex flex-col gap-8 px-4 py-14 items-center">
           <h1 className="font-bold text-3xl text-[#0A2E72] uppercase text-center">
