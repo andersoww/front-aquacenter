@@ -40,7 +40,7 @@ export function BrandAnimation() {
   );
 
   return (
-    <section className="w-full justify-center p-4 flex flex-col items-center gap-4">
+    <section className="w-full justify-center p-8 flex flex-col items-center gap-4">
       <h1 className="font-bold text-3xl text-[#0A2E72] uppercase">
         Marcas e Parceiros!
       </h1>
