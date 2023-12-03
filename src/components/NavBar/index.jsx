@@ -3,7 +3,7 @@ import { Button, ButtonGroup } from "@nextui-org/button";
 
 export function NavBar() {
   return (
-    <nav className="flex justify-between items-center bg-[#C23336] w-full h-[75px] fixed top-0 ">
+    <nav className="flex justify-between items-center bg-[#C23336] w-full h-[75px] fixed top-0 z-50">
       <Image
         src="/logo.png"
         width={300}

@@ -1,17 +1,16 @@
-"use client";
-
+/* eslint-disable @next/next/no-img-element */
 import { BrandAnimation } from "@/components/BrandAnimation";
 import { Footer } from "@/components/Footer";
-import { NavBar } from "@/components/NavBar";
-import { Image } from "next/image";
+import { SectionSlider } from "@/components/SectionSlider";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col">
-      <NavBar />
+    <main className="flex min-h-screen flex-col overflow-hidden scroll-smooth pt-[75px]">
+      <SectionSlider />
+
       <section className="w-full flex justify-center bg-[#F8F8F8]">
         <div className="max-w-5xl flex flex-col gap-8 px-4 py-14 items-center">
-          <h1 className="font-bold text-3xl text-[#0A2E72] uppercase text-center">
+          <h1 className="font-bold text-3xl text-[#36393f] uppercase text-center">
             Quem Somos
           </h1>
 
@@ -27,7 +26,7 @@ export default function Home() {
             PageMaker including versions of Lorem Ipsum.
           </p>
 
-          <Image
+          <img
             src="/FOTO_01.jpg"
             alt=""
             width={400}
@@ -39,7 +38,6 @@ export default function Home() {
 
       <section className="w-full bg-[#64AFCF] flex justify-center bg-[url('/background.png')]">
         <div className="max-w-5xl justify-between w-full px-4 py-14 flex gap-8">
-          {/* Card */}
           <div>
             <div className="p-4 bg-white shadow-sm w-[300px] h-[250px] rounded-md">
               <h1 className="font-bold text-2xl text-[#0A2E72] p-4 text-left">
@@ -48,7 +46,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Text */}
           <div className="text-white gap-8 flex flex-col">
             <h3 className="text-xl font-semibold">
               Duis aute irure dolor in reprehenderit in voluptate velit esse
@@ -64,7 +61,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       <BrandAnimation />
+
       <Footer />
     </main>
   );
