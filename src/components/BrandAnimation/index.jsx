@@ -33,7 +33,13 @@ export function BrandAnimation() {
       { path: "/ifood.svg" },
       { path: "/whatsapp-logo.png" },
       { path: "/amazon.png" },
+      { path: "/discord.svg" },
       { path: "/ifood.svg" },
+      { path: "/whatsapp-logo.png" },
+      { path: "/amazon.png" },
+      { path: "/discord.svg" },
+      { path: "/ifood.svg" },
+      { path: "/whatsapp-logo.png" },
       { path: "/amazon.png" },
     ],
     []
