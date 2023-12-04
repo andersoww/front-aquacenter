@@ -1,16 +1,11 @@
 "use client";
-import "react-slideshow-image/dist/styles.css";
 import { Button } from "@nextui-org/button";
-import { Slide } from "react-slideshow-image";
 import Image from "next/image";
+import { Slide } from "react-slideshow-image";
+import "react-slideshow-image/dist/styles.css";
 import { ClientOnly } from "../ClientOnly";
 
 export function SectionSlider() {
-  const images = [
-    "https://images.unsplash.com/photo-1509721434272-b79147e0e708?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
-    "https://images.unsplash.com/photo-1506710507565-203b9f24669b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1536&q=80",
-    "https://images.unsplash.com/photo-1536987333706-fc9adfb10d91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
-  ];
   return (
     <section className="w-full relative">
       <div className="absolute flex flex-col top-[360px] px-24 gap-4 z-40 w-full">
@@ -18,7 +13,7 @@ export function SectionSlider() {
           Projetos de piscinas Profissionais, com os Melhores produtos!
         </h1>
 
-        <Button className="rounded-3xl bg-[#64AFCF] flex justify-center items-center text-[#F9F9F9] px-[22px] py-4 w-[250px]">
+        <Button className="rounded-3xl bg-[#64AFCF] flex justify-center items-center text-[#F9F9F9] px-[22px] py-4 w-[250px] font-bold">
           Faça seu orçamento aqui!
         </Button>
       </div>
