@@ -1,5 +1,6 @@
 import { BrandAnimation } from "@/components/BrandAnimation";
 import { Footer } from "@/components/Footer";
+import { SectionContact } from "@/components/SectionContact";
 import { SectionSlider } from "@/components/SectionSlider";
 import { Button } from "@nextui-org/button";
 import Image from "next/image";
@@ -120,31 +121,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full bg-[#64AFCF] flex justify-center bg-[url('/background.png')]">
-        <div className="max-w-5xl justify-between w-full px-4 py-14 flex gap-8">
-          <div>
-            <div className="p-4 bg-white shadow-sm w-[300px] h-[250px] rounded-md">
-              <h1 className="font-bold text-2xl text-[#0A2E72] p-4 text-left">
-                Entre em contato Agora mesmo!
-              </h1>
-            </div>
-          </div>
-
-          <div className="text-white gap-8 flex flex-col">
-            <h3 className="text-xl font-semibold">
-              Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur.
-            </h3>
-
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, qu nostrud exercitation ullamco laboris nisi
-              ut aliquip.
-            </p>
-          </div>
-        </div>
-      </section>
+      <SectionContact />
 
       <BrandAnimation />
 
