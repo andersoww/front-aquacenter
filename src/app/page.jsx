@@ -3,9 +3,27 @@ import { Footer } from "@/components/Footer";
 import { SectionContact } from "@/components/SectionContact";
 import { SectionSlider } from "@/components/SectionSlider";
 import { Button } from "@nextui-org/button";
+import { PopoverCard } from "@/components/PopoverCard";
 import Image from "next/image";
 
 export default function Home() {
+  const arrayCards = [
+    {
+      title: "Piscinas de Vinil",
+      description:
+        "Os benefícios do vinil e mais: \n elimina necessidade perfil de encaixe \n elimina necessidade de extravasor \n (ladrão) \n 05 anos garantia \n 20 - 25 anos vida útil \n 1,50 / 2,00 mm \n + 10 estampas \n solda ultrassônica aplicada \n para moldar a piscina",
+      image: "/FOTO_01.jpg",
+      popoverPosition: "top-start",
+    },
+    { title: "Piscinas de Manta Armada" },
+    { title: "Piscinas de Alvenaria" },
+    { title: "Piscinas Naturais", popoverPosition: "top-end" },
+    { title: "Piscinas de Fibra" },
+    { title: "Piscinas de Poliester" },
+    { title: "Aquecimento De Banho" },
+    { title: "Produtos Químicos" },
+  ];
+
   return (
     <main className="flex min-h-screen flex-col overflow-hidden scroll-smooth pt-[75px]">
       <SectionSlider />
@@ -28,7 +46,7 @@ export default function Home() {
             PageMaker including versions of Lorem Ipsum.
           </p>
 
-          <img
+          <Image
             src="/FOTO_01.jpg"
             alt=""
             width={400}
@@ -80,33 +98,14 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-4 py-16">
-            {[
-              { title: "Piscinas de Vinil" },
-              { title: "Piscinas de Manta Armada" },
-              { title: "Piscinas de Alvenaria" },
-              { title: "Piscinas Naturais" },
-              { title: "Piscinas de Fibra" },
-              { title: "Piscinas de Poliester" },
-              { title: "Aquecimento De Banho" },
-              { title: "Produtos Químicos" },
-            ].map((item, index) => (
-              <div
+            {arrayCards.map((item, index) => (
+              <PopoverCard
                 key={index}
-                className="flex flex-col items-center gap-4 bg-white shadow-sm w-full h-[200px] border border-[#EFF3F6] p-4"
-              >
-                <div className="w-[90px] h-[90px] bg-[#ACD5F4] rounded-full flex items-center justify-center">
-                  <Image
-                    src="/icone-piscina01.png"
-                    alt=""
-                    width={50}
-                    height={50}
-                  />
-                </div>
-
-                <p className="text-[#0A2E72] text-center font-semibold text-xl">
-                  {item.title}
-                </p>
-              </div>
+                description={item.description}
+                image={item.image}
+                popoverPosition={item.popoverPosition}
+                title={item.title}
+              />
             ))}
           </div>
 
