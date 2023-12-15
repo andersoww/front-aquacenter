@@ -22,8 +22,8 @@ export function Footer() {
   return (
     <>
       <footer className="flex bg-[#0a2e72] justify-center">
-        <div className="max-w-5xl w-full px-4 py-14 container bg-[url('/footer.png'),url('/footer.png')] flex justify-between items-center">
-          <div className="flex flex-col max-w-[300px] gap-6">
+        <div className="max-w-5xl w-full px-4 py-14 container bg-[url('/footer.png'),url('/footer.png')] max-md:bg-[url('/footer.png')] max-md:bg-cover flex justify-between items-center max-md:items-start max-md:flex-col max-md:gap-8 max-md:text-start">
+          <div className="flex flex-col max-w-[300px] gap-6 max-md:items-start">
             <Image
               src="/logo.png"
               height={100}
@@ -31,7 +31,7 @@ export function Footer() {
               alt="logo"
               className="w-[200px] h-[50px] object-contain"
             />
-            <p className="text-sm text-left text-white">
+            <p className="text-sm text-left max-md:text-start text-white">
               Lorem ipsum is placeholder text commonly used in the graphic,
               print, and publishing industries mockups.
             </p>
@@ -57,7 +57,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="flex gap-24">
+          <div className="flex gap-24 max-md:flex-col max-md:gap-6">
             <NavigationContainer
               title="Departments"
               pathname={[

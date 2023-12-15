@@ -57,13 +57,13 @@ export default function Home() {
       </section>
 
       <section className="w-full flex justify-center bg-[#64AFCF]">
-        <div className="max-w-5xl flex flex-col px-4 py-14 text-white gap-16">
-          <div className="bg-[#0A2E72] p-4 flex h-[350px] rounded-sm relative">
-            <div className="flex flex-col w-1/2 gap-4 p-4 pt-6">
+        <div className="w-full max-w-5xl flex flex-col px-4 py-14 text-white gap-16 max-md:justify-center">
+          <div className="bg-[#0A2E72] p-4 flex h-full rounded-sm max-md:flex-col w-full">
+            <div className="flex flex-col w-1/2 max-md:w-full gap-4 p-4 pt-6  max-md:mb-8">
               <p className="font-semibold text-[#00FFC0]">
                 Manage your health care
               </p>
-              <h2 className="font-bold text-3xl text-left w-[360px]">
+              <h2 className="font-bold text-3xl text-left max-w-[360px]">
                 Trust us to be there to help{" "}
                 <span className="text-[#0088FF]">all and make</span> things weel
                 again.
@@ -73,31 +73,31 @@ export default function Home() {
               </Button>
             </div>
 
-            <div className="w-14 h-14 rounded-full bg-[#0088FF] flex justify-center items-center border border-white absolute inset-1/2 transform -translate-x-1/2 -translate-y-1/2 mt-20">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                className="lucide lucide-play fill-white"
-              >
-                <polygon points="5 3 19 12 5 21 5 3" />
-              </svg>
+            <div className="w-1/2 max-md:w-full h-[350px] bg-zinc-300 relative">
+              <div className="w-14 h-14 rounded-full bg-[#0088FF] flex justify-center items-center border border-white absolute transform -left-7 md:bottom-[50px] max-md:-top-7 max-md:-ml-4 max-md:inset-1/2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  className="lucide lucide-play fill-white"
+                >
+                  <polygon points="5 3 19 12 5 21 5 3" />
+                </svg>
+              </div>
             </div>
-            <div className="w-1/2 bg-zinc-300"></div>
           </div>
-          <div className="flex flex-col items-center gap-4">
+          <div className="w-full max-w-5xl flex flex-col items-center gap-4 bg-[#64AFCF] text-white px-4">
             <h3 className="text-2xl font-bold">NOSSOS SERVIÇOS</h3>
-            <p className="text-center w-[700px]">
+            <p className="text-center">
               Duis aute irure dolor in reprehenderit in voluptate velit esse
               cillum dolore fugiat sunt culpa officia deserunt mollit anim est
               laborum.
             </p>
           </div>
-
-          <div className="grid grid-cols-4 py-16">
+          <div className="grid grid-cols-4 py-16 max-md:grid-cols-2 max-sm:grid-cols-1">
             {arrayCards.map((item, index) => (
               <PopoverCard
                 key={index}
@@ -108,10 +108,9 @@ export default function Home() {
               />
             ))}
           </div>
-
           <div className="flex flex-col items-center gap-4">
             <h3 className="text-2xl font-bold">REDES SOCIAIS</h3>
-            <p className="text-center w-[700px]">
+            <p className="text-center w-fit">
               Duis aute irure dolor in reprehenderit in voluptate velit esse
               cillum dolore fugiat sunt culpa officia deserunt mollit anim est
               laborum.

@@ -3,9 +3,9 @@ import Image from "next/image";
 export function SectionContact() {
   return (
     <section className="w-full bg-[#64AFCF] flex justify-center bg-[url('/background.png')]">
-      <div className="max-w-5xl justify-between w-full px-4 py-14 flex gap-8">
+      <div className="max-w-5xl justify-between w-full px-4 py-14 flex gap-8 max-sm:flex-col max-sm:items-center">
         <div>
-          <div className="p-8 bg-white shadow-sm w-[300px] h-full rounded-md flex flex-col gap-6">
+          <div className="p-8 bg-white shadow-sm w-[300px] h-fit rounded-xl flex flex-col gap-6">
             <h1 className="font-bold text-2xl text-[#0A2E72] text-left">
               Entre em contato Agora mesmo!
             </h1>
@@ -38,7 +38,7 @@ export function SectionContact() {
           </div>
         </div>
 
-        <div className="text-white gap-6 flex flex-col">
+        <div className="text-white gap-6 flex flex-col max-sm:items-center max-sm:text-center">
           <h3 className="text-xl font-semibold">
             Duis aute irure dolor in reprehenderit in voluptate velit esse
             cillum dolore eu fugiat nulla pariatur.

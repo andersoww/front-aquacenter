@@ -31,7 +31,7 @@ export function PopoverCard({ title, description, image, popoverPosition }) {
           </p>
         </div>
       </PopoverTrigger>
-      <PopoverContent className="bg-[#E3E3E3] w-full flex flex-row rounded-3xl justify-between p-8 gap-20">
+      <PopoverContent className="bg-[#E3E3E3] w-full flex flex-row rounded-3xl justify-between p-8 gap-20 max-md:gap-10 max-md:flex-col">
         <div className="w-full flex flex-col gap-6">
           <h2 className="text-xl font-bold uppercase text-[#0A2E72]">
             {title}
