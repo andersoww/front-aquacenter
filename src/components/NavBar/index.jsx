@@ -4,47 +4,37 @@ import { Button, ButtonGroup } from "@nextui-org/button";
 import Link from "next/link";
 import { PopoverMenuNavBar } from "./PopoverMenuNavBar";
 import { usePathname } from "next/navigation";
+import { SmoothScroll } from "@/utils/SmoothScroll";
 import clsx from "clsx";
 
 export function NavBar() {
-  const arrayItems = [
-    { description: "Home", link: "/" },
-    { description: "Quem somos", link: "/" },
-    { description: "Serviços", link: "/" },
-    { description: "Redes sociais", link: "/" },
-    { description: "Faça seu orçamento", link: "/" },
-  ];
-
   const path = usePathname();
 
   return (
     <nav className="flex justify-between max-md:justify-center items-center bg-[#C23336] w-full h-[75px] fixed top-0 z-50 pl-[100px] max-md:pl-[40px]">
       <div className="absolute left-12 md:hidden">
-        <PopoverMenuNavBar items={arrayItems} />
+        <PopoverMenuNavBar />
       </div>
+
       <Link href="/">
         <Image src="/logo.png" width={200} height={100} alt="" className="" />
       </Link>
       <ButtonGroup className="text-[#F9F9F9] flex justify-end ml-auto mr-[58px] max-[1100px]:hidden">
-        <Link href="/">
-          <Button color="" variant="light">
-            Home
-          </Button>
-        </Link>
-        <Button color="" variant="light">
-          Quem somos
-        </Button>
-        <Button color="" variant="light">
-          Serviços
-        </Button>
-        <Button color="" variant="light">
-          Redes sociais
-        </Button>
-        <Link href="/budget">
-          <Button color="" variant="light">
-            Contato
-          </Button>
-        </Link>
+        {["Home", "Quem Somos", "Serviços", "Redes sociais", "Contato"].map(
+          (head, index) => {
+            return (
+              <Button
+                key={index}
+                color=""
+                variant="light"
+                onClick={SmoothScroll}
+                href={`#${head}`}
+              >
+                {head}
+              </Button>
+            );
+          }
+        )}
       </ButtonGroup>
       <div
         className={clsx(

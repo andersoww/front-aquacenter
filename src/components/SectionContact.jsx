@@ -2,7 +2,10 @@ import Image from "next/image";
 
 export function SectionContact() {
   return (
-    <section className="w-full bg-[#64AFCF] flex justify-center bg-[url('/background.png')]">
+    <section
+      className="w-full bg-[#64AFCF] flex justify-center bg-[url('/background.png')]"
+      id="Contato"
+    >
       <div className="max-w-5xl justify-between w-full px-4 py-14 flex gap-8 max-sm:flex-col max-sm:items-center">
         <div>
           <div className="p-8 bg-white shadow-sm w-[300px] h-fit rounded-xl flex flex-col gap-6">

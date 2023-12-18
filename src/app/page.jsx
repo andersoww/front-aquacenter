@@ -28,7 +28,10 @@ export default function Home() {
     <main className="flex min-h-screen flex-col overflow-hidden scroll-smooth pt-[75px]">
       <SectionSlider />
 
-      <section className="w-full flex justify-center bg-[#F8F8F8]">
+      <section
+        className="w-full flex justify-center bg-[#F8F8F8]"
+        id="Quem Somos"
+      >
         <div className="max-w-5xl flex flex-col gap-8 px-4 py-14 items-center">
           <h1 className="font-bold text-3xl text-[#36393f] uppercase text-center">
             Quem Somos
@@ -89,33 +92,42 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="w-full max-w-5xl flex flex-col items-center gap-4 bg-[#64AFCF] text-white px-4">
+
+          <section
+            className="w-full max-w-5xl flex flex-col items-center gap-4 bg-[#64AFCF] text-white px-4"
+            id="Serviços"
+          >
             <h3 className="text-2xl font-bold">NOSSOS SERVIÇOS</h3>
             <p className="text-center">
               Duis aute irure dolor in reprehenderit in voluptate velit esse
               cillum dolore fugiat sunt culpa officia deserunt mollit anim est
               laborum.
             </p>
-          </div>
-          <div className="grid grid-cols-4 py-16 max-md:grid-cols-2 max-sm:grid-cols-1">
-            {arrayCards.map((item, index) => (
-              <PopoverCard
-                key={index}
-                description={item.description}
-                image={item.image}
-                popoverPosition={item.popoverPosition}
-                title={item.title}
-              />
-            ))}
-          </div>
-          <div className="flex flex-col items-center gap-4">
+
+            <div className="grid grid-cols-4 py-16 max-md:grid-cols-2 max-sm:grid-cols-1">
+              {arrayCards.map((item, index) => (
+                <PopoverCard
+                  key={index}
+                  description={item.description}
+                  image={item.image}
+                  popoverPosition={item.popoverPosition}
+                  title={item.title}
+                />
+              ))}
+            </div>
+          </section>
+
+          <section
+            className="flex flex-col items-center gap-4"
+            id="Redes sociais"
+          >
             <h3 className="text-2xl font-bold">REDES SOCIAIS</h3>
             <p className="text-center w-fit">
               Duis aute irure dolor in reprehenderit in voluptate velit esse
               cillum dolore fugiat sunt culpa officia deserunt mollit anim est
               laborum.
             </p>
-          </div>
+          </section>
         </div>
       </section>
 

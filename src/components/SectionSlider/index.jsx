@@ -7,7 +7,7 @@ import { ClientOnly } from "../ClientOnly";
 
 export function SectionSlider() {
   return (
-    <section className="w-full relative">
+    <section className="w-full relative" id="Home">
       <div className="absolute flex flex-col mt-[360px] px-24 max-md:px-4 gap-4 z-40 w-full">
         <h1 className="text-white font-bold text-4xl max-md:text-3xl w-[450px]">
           Projetos de piscinas Profissionais, com os Melhores produtos!
