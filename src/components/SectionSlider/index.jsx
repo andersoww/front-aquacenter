@@ -8,8 +8,8 @@ import { ClientOnly } from "../ClientOnly";
 export function SectionSlider() {
   return (
     <section className="w-full relative">
-      <div className="absolute flex flex-col top-[360px] px-24 gap-4 z-40 w-full">
-        <h1 className="text-white font-bold text-4xl w-[450px]">
+      <div className="absolute flex flex-col mt-[360px] px-24 max-md:px-4 gap-4 z-40 w-full">
+        <h1 className="text-white font-bold text-4xl max-md:text-3xl w-[450px]">
           Projetos de piscinas Profissionais, com os Melhores produtos!
         </h1>
 
@@ -67,9 +67,9 @@ export function SectionSlider() {
             <Image
               src="/FOTO_01.jpg"
               alt=""
-              width={500}
+              width={4000}
               height={500}
-              className="max-w-full h-[700px] w-full object-cover"
+              className="h-[700px] object-cover"
             />
           </div>
         </Slide>
