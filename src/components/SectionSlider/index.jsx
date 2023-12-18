@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import { ClientOnly } from "../ClientOnly";
+import Link from "next/link";
 
 export function SectionSlider() {
   return (
@@ -13,9 +14,11 @@ export function SectionSlider() {
           Projetos de piscinas Profissionais, com os Melhores produtos!
         </h1>
 
-        <Button className="rounded-3xl bg-[#64AFCF] flex justify-center items-center text-[#F9F9F9] px-[22px] py-4 w-[250px] font-bold">
-          Faça seu orçamento aqui!
-        </Button>
+        <Link href="/budget">
+          <Button className="rounded-3xl bg-[#64AFCF] flex justify-center items-center text-[#F9F9F9] px-[22px] py-4 w-[250px] font-bold">
+            Faça seu orçamento aqui!
+          </Button>
+        </Link>
       </div>
 
       <ClientOnly
