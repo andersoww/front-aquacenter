@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import { ClientOnly } from "../ClientOnly";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export function SectionSlider() {
   return (
@@ -33,38 +34,8 @@ export function SectionSlider() {
         }
       >
         <Slide
-          prevArrow={
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="48"
-              height="48"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              className="lucide lucide-chevron-left text-white"
-            >
-              <path d="m15 18-6-6 6-6" />
-            </svg>
-          }
-          nextArrow={
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="48"
-              height="48"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              className="lucide lucide-chevron-right text-white"
-            >
-              <path d="m9 18 6-6-6-6" />
-            </svg>
-          }
+          prevArrow={<ChevronLeft className="text-white w-10 h-10" />}
+          nextArrow={<ChevronRight className="text-white w-10 h-10" />}
         >
           <div className="each-slide-effect">
             <Image

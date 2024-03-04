@@ -60,14 +60,14 @@ export default function Home() {
 
           <div className="flex gap-6 w-full max-sm:flex-col">
             <div className="flex flex-col w-[70%] gap-8 max-sm:w-full">
-              <p className="text-right text-[#0A2E72] font-light text-xl max-sm:text-center">
+              <p className="text-right text-[#0A2E72] text-xl max-sm:text-center">
                 Assim, nos tornamos referência no <br />
                 segmento de piscinas e aquecedores com <br /> grande variedade
                 de produtos e serviços <br /> de projeto, construção,
                 instalação, <br /> reforma e assistência.
               </p>
 
-              <p className="text-right text-[#0A2E72] font-light text-xl max-sm:text-center">
+              <p className="text-right text-[#0A2E72] text-xl max-sm:text-center">
                 Prezamos muito por qualidade nos <br /> produtos e nos serviços
                 prestados. Por <br /> isso, somos representantes das melhores
                 marcas do Brasil e estamos sempre <br /> atentos aos novos
@@ -99,13 +99,13 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col w-[40%] gap-4 max-sm:w-full">
-              <p className="text-left text-[#0A2E72] font-light text-xl max-sm:text-center">
+              <p className="text-left text-[#0A2E72] text-xl max-sm:text-center">
                 Contamos com equipe de engenharia e <br /> arquitetura para os
                 projetos mais <br /> exigentes. E mão-de-obra de técnicos <br />
                 especializados para execução e <br /> assistência.
               </p>
 
-              <p className="text-left text-[#0A2E72] font-light text-xl max-sm:text-center">
+              <p className="text-left text-[#0A2E72] text-xl max-sm:text-center">
                 Fundada em Bebedouro – SP atendemos <br /> toda a região em um
                 raio de 150 km.
                 <br /> Responsável técnico Engenheiro Guido <br /> Poletto. Mais
