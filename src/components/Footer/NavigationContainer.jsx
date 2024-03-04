@@ -14,7 +14,7 @@ function NavigationContainer({ title, pathname }) {
             <Link
               key={index}
               className="text-white text-sm hover:underline font-medium hover:cursor-pointer"
-              href={`#${item.path}`}
+              href={`/#${item.path}`}
               onClick={(e) => {
                 if (path === "/") SmoothScroll(e);
               }}
