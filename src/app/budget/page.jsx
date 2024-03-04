@@ -1,6 +1,5 @@
-import { Footer } from "@/components/Footer";
-import { Input, Textarea } from "@nextui-org/input";
 import { Button } from "@nextui-org/button";
+import { Input, Textarea } from "@nextui-org/input";
 import Image from "next/image";
 
 export default function Contact() {
@@ -79,7 +78,6 @@ export default function Contact() {
           </div>
         </div>
       </section>
-      <Footer />
     </main>
   );
 }

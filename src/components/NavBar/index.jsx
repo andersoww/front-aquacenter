@@ -11,7 +11,7 @@ export function NavBar() {
   const path = usePathname();
 
   return (
-    <nav className="flex justify-between max-md:justify-center items-center bg-[#C23336] w-full h-[75px] fixed top-0 z-50 pl-[100px] max-md:pl-[40px]">
+    <header className="flex justify-between max-md:justify-center items-center bg-[#C23336] w-full h-[75px] fixed top-0 z-50 pl-[100px] max-md:pl-[40px] gap-4">
       <div className="absolute left-12 md:hidden">
         <PopoverMenuNavBar />
       </div>
@@ -19,22 +19,30 @@ export function NavBar() {
       <Link href="/">
         <Image src="/logo.png" width={200} height={100} alt="" className="" />
       </Link>
-      <ButtonGroup className="text-[#F9F9F9] flex justify-end ml-auto mr-[58px] max-[1100px]:hidden">
-        {["Home", "Quem Somos", "Serviços", "Redes sociais", "Contato"].map(
-          (head, index) => {
-            return (
-              <Button
-                key={index}
-                color=""
-                variant="light"
-                onClick={SmoothScroll}
-                href={`#${head}`}
+
+      <ButtonGroup className="text-[#F9F9F9] flex justify-end ml-auto max-[1100px]:hidden">
+        {[
+          { title: "INÍCIO", href: "home" },
+          { title: "QUEM SOMOS", href: "aboutUs" },
+          { title: "PROJETOS RECENTES", href: "home" },
+          { title: "NOSSAS SOLUÇÕES", href: "solutions" },
+          { title: "CONTATO", href: "contact" },
+        ].map((head, index) => {
+          return (
+            <Button key={index} className="" color="" variant="light">
+              <Link
+                href={`/#${head.href}`}
+                onClick={(e) => {
+                  if (path === "/") SmoothScroll(e);
+                }}
               >
-                {head}
-              </Button>
-            );
-          }
-        )}
+                <p className="whitespace-pre-line font-bold text-sm">
+                  {head.title}
+                </p>
+              </Link>
+            </Button>
+          );
+        })}
       </ButtonGroup>
       <div
         className={clsx(
@@ -42,15 +50,37 @@ export function NavBar() {
           { hidden: path === "/budget" }
         )}
       >
-        <div className="flex text-base justify-start items-center w-full bg-[#0a2e72] h-full px-11 polygon absolute z-10 ml-1">
+        <div className="flex text-base justify-start items-center w-full bg-[#0a2e72] h-full px-11 polygon absolute z-10 ml-1 gap-4">
           <Link href="/budget">
-            <Button className="rounded-3xl bg-[#64AFCF] flex justify-center items-center text-[#F9F9F9] px-[22px] py-4 ml-[26px] font-bold">
-              Faça seu orçamento
+            <Button className="rounded-3xl bg-[#64AFCF] flex justify-center items-center text-[#F9F9F9] px-[22px] py-4 font-bold">
+              QUERO UM ORÇAMENTO
             </Button>
           </Link>
+
+          <div className="flex gap-2 items-center">
+            <Link href="https://www.instagram.com/aquacenterbebedouro/">
+              <Image
+                width={40}
+                height={40}
+                alt=""
+                className="object-contain"
+                src="/instagram.png"
+              />
+            </Link>
+
+            <Link href="https://www.facebook.com/aquacenterbebedouro/?locale=pt_BR">
+              <Image
+                width={40}
+                height={40}
+                alt=""
+                className="hover:cursor-pointer"
+                src="/facebook.png"
+              />
+            </Link>
+          </div>
         </div>
         <div className="flex w-full pr-10 bg-white h-full polygon absolute z-0" />
       </div>
-    </nav>
+    </header>
   );
 }

@@ -46,9 +46,9 @@ export function BrandAnimation() {
   );
 
   return (
-    <section className="w-full justify-center p-8 flex flex-col items-center gap-4">
-      <h1 className="font-bold text-3xl text-[#0A2E72] uppercase">
-        Marcas e Parceiros!
+    <section className="w-full justify-center py-20 flex flex-col items-center gap-4 px-8">
+      <h1 className="font-bold text-5xl text-[#0A2E72] text-center max-sm:text-3xl">
+        Marcas e Parceiros
       </h1>
       <div className="scroller" ref={scroller}>
         <ul

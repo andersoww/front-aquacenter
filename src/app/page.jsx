@@ -1,27 +1,44 @@
 import { BrandAnimation } from "@/components/BrandAnimation";
-import { Footer } from "@/components/Footer";
 import { SectionContact } from "@/components/SectionContact";
 import { SectionSlider } from "@/components/SectionSlider";
-import { Button } from "@nextui-org/button";
-import { PopoverCard } from "@/components/PopoverCard";
+import { Check, CheckCircle } from "lucide-react";
 import Image from "next/image";
 
 export default function Home() {
   const arrayCards = [
     {
-      title: "Piscinas de Vinil",
-      description:
-        "Os benefícios do vinil e mais: \n elimina necessidade perfil de encaixe \n elimina necessidade de extravasor \n (ladrão) \n 05 anos garantia \n 20 - 25 anos vida útil \n 1,50 / 2,00 mm \n + 10 estampas \n solda ultrassônica aplicada \n para moldar a piscina",
-      image: "/FOTO_01.jpg",
-      popoverPosition: "top-start",
+      title: "Construção de piscina de vinil",
     },
-    { title: "Piscinas de Manta Armada" },
-    { title: "Piscinas de Alvenaria" },
-    { title: "Piscinas Naturais", popoverPosition: "top-end" },
-    { title: "Piscinas de Fibra" },
-    { title: "Piscinas de Poliester" },
-    { title: "Aquecimento De Banho" },
-    { title: "Produtos Químicos" },
+    { title: "Construção de piscina de alvenaria" },
+    { title: "Construção de SPAs" },
+    { title: "Instalação de piscina de fibra", popoverPosition: "top-end" },
+    { title: "Instalação de piscina de poliéster" },
+    { title: "Instalação de manta armada vinílica" },
+    { title: "Troca de vinil" },
+    { title: "Reforma em piscina de alvenaria" },
+    { title: "Aquecimento solar para piscina" },
+    { title: "Aquecimento por trocador de calor" },
+    { title: "Automação para piscina" },
+    { title: "Instalação de capa térmica" },
+    { title: "Instalação de cerca de proteção" },
+    { title: "Sistemas de desinfecção para piscina" },
+    { title: "Bordas e pisos atérmicos" },
+    { title: "Instalação de Sauna" },
+    { title: "Projeto arquitetônico 3D" },
+    { title: "Projetos estrutural e hidráulico" },
+    { title: "Aquecimento solar de banho" },
+    { title: "Pressurização de sistema de banho" },
+  ];
+
+  const referer = [
+    "Representante das melhores marcas do segmento",
+    "Parceria com grandes arquitetos, profissionais",
+    "Fornecimento de projetos em 2D e 3D",
+    "Prazos acordados são fielmente seguidos",
+    "Atendentes capacitados para tirar dúvidas gerais",
+    "Equipe de funcionários uniformizados",
+    "Showroom completo",
+    "Variedade em produtos químicos e acessórios",
   ];
 
   return (
@@ -29,113 +46,158 @@ export default function Home() {
       <SectionSlider />
 
       <section
-        className="w-full flex justify-center bg-[#F8F8F8]"
-        id="Quem Somos"
+        className="w-full flex justify-center bg-[#FFFFFF] py-20 px-8"
+        id="aboutUs"
       >
-        <div className="max-w-5xl flex flex-col gap-8 px-4 py-14 items-center">
-          <h1 className="font-bold text-3xl text-[#36393f] uppercase text-center">
+        <div className="max-w-7xl flex flex-col gap-8">
+          <h1 className="font-bold text-5xl text-[#0A2E72] text-center max-sm:text-3xl">
             Quem Somos
           </h1>
 
-          <p className="text-[#707070] text-center font-medium">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry’s standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
-          </p>
+          <h2 className="text-[#0A2E72] font-semibold text-2xl text-center max-sm:text-xl">
+            Desde 1987 buscando transformar seu sonho em realidade.
+          </h2>
 
-          <Image
-            src="/FOTO_01.jpg"
-            alt=""
-            width={400}
-            height={400}
-            className="w-full"
-          />
-        </div>
-      </section>
-
-      <section className="w-full flex justify-center bg-[#64AFCF]">
-        <div className="w-full max-w-5xl flex flex-col px-4 py-14 text-white gap-16 max-md:justify-center">
-          <div className="bg-[#0A2E72] p-4 flex h-full rounded-sm max-md:flex-col w-full">
-            <div className="flex flex-col w-1/2 max-md:w-full gap-4 p-4 pt-6  max-md:mb-8">
-              <p className="font-semibold text-[#00FFC0]">
-                Manage your health care
+          <div className="flex gap-6 w-full max-sm:flex-col">
+            <div className="flex flex-col w-[70%] gap-8 max-sm:w-full">
+              <p className="text-right text-[#0A2E72] font-light text-xl max-sm:text-center">
+                Assim, nos tornamos referência no <br />
+                segmento de piscinas e aquecedores com <br /> grande variedade
+                de produtos e serviços <br /> de projeto, construção,
+                instalação, <br /> reforma e assistência.
               </p>
-              <h2 className="font-bold text-3xl text-left max-w-[360px]">
-                Trust us to be there to help{" "}
-                <span className="text-[#0088FF]">all and make</span> things weel
-                again.
-              </h2>
-              <Button className="bg-[#0088FF] w-[200px] mt-8 rounded-3xl text-white font-semibold">
-                All Doctors
-              </Button>
+
+              <p className="text-right text-[#0A2E72] font-light text-xl max-sm:text-center">
+                Prezamos muito por qualidade nos <br /> produtos e nos serviços
+                prestados. Por <br /> isso, somos representantes das melhores
+                marcas do Brasil e estamos sempre <br /> atentos aos novos
+                lançamentos do <br /> mercado para fazer o seu sonho da área de
+                lazer se tornar real.
+              </p>
             </div>
 
-            <div className="w-1/2 max-md:w-full h-[350px] bg-zinc-300 relative">
-              <div className="w-14 h-14 rounded-full bg-[#0088FF] flex justify-center items-center border border-white absolute transform -left-7 md:bottom-[50px] max-md:-top-7 max-md:-ml-4 max-md:inset-1/2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  height="18"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  className="lucide lucide-play fill-white"
-                >
-                  <polygon points="5 3 19 12 5 21 5 3" />
-                </svg>
+            <div className="overflow-hidden rounded-xl w-full">
+              <Image
+                src="/FOTO_01.jpg"
+                alt=""
+                width={200}
+                height={200}
+                className="w-full h-[380px] object-cover"
+              />
+            </div>
+          </div>
+
+          <div className="flex gap-6 w-full items-start max-sm:flex-col">
+            <div className="overflow-hidden rounded-xl w-[60%] max-sm:w-full">
+              <Image
+                src="/FOTO_01.jpg"
+                alt=""
+                width={200}
+                height={200}
+                className="w-full h-[400px] object-cover"
+              />
+            </div>
+
+            <div className="flex flex-col w-[40%] gap-4 max-sm:w-full">
+              <p className="text-left text-[#0A2E72] font-light text-xl max-sm:text-center">
+                Contamos com equipe de engenharia e <br /> arquitetura para os
+                projetos mais <br /> exigentes. E mão-de-obra de técnicos <br />
+                especializados para execução e <br /> assistência.
+              </p>
+
+              <p className="text-left text-[#0A2E72] font-light text-xl max-sm:text-center">
+                Fundada em Bebedouro – SP atendemos <br /> toda a região em um
+                raio de 150 km.
+                <br /> Responsável técnico Engenheiro Guido <br /> Poletto. Mais
+                de 1.300 projetos <br /> concluídos.
+              </p>
+
+              <div className="flex gap-4 max-sm:justify-center">
+                <Image
+                  src="/icones-02.png"
+                  alt=""
+                  width={100}
+                  height={100}
+                  className="w-[100px]"
+                />
+                <Image
+                  src="/icones-03.png"
+                  alt=""
+                  width={100}
+                  height={100}
+                  className="w-[100px]"
+                />
+                <Image
+                  src="/icones_Prancheta 1.png"
+                  alt=""
+                  width={100}
+                  height={100}
+                  className="w-[100px]"
+                />
               </div>
             </div>
           </div>
 
-          <section
-            className="w-full max-w-5xl flex flex-col items-center gap-4 bg-[#64AFCF] text-white px-4"
-            id="Serviços"
-          >
-            <h3 className="text-2xl font-bold">NOSSOS SERVIÇOS</h3>
-            <p className="text-center">
-              Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore fugiat sunt culpa officia deserunt mollit anim est
-              laborum.
-            </p>
+          <div className="flex justify-start flex-col gap-3">
+            <h3 className="text-[#0A2E72] font-semibold text-xl">
+              Porque somos referência:
+            </h3>
 
-            <div className="grid grid-cols-4 py-16 max-md:grid-cols-2 max-sm:grid-cols-1">
-              {arrayCards.map((item, index) => (
-                <PopoverCard
+            <ul className="grid grid-cols-2 gap-2 max-sm:grid-cols-1">
+              {referer.map((item, index) => (
+                <li
                   key={index}
-                  description={item.description}
-                  image={item.image}
-                  popoverPosition={item.popoverPosition}
-                  title={item.title}
-                />
+                  className="flex gap-2 items-center text-[#0A2E72] text-lg"
+                >
+                  <CheckCircle className="w-5 h-5" />
+                  {item}
+                </li>
               ))}
-            </div>
-          </section>
-
-          <section
-            className="flex flex-col items-center gap-4"
-            id="Redes sociais"
-          >
-            <h3 className="text-2xl font-bold">REDES SOCIAIS</h3>
-            <p className="text-center w-fit">
-              Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore fugiat sunt culpa officia deserunt mollit anim est
-              laborum.
-            </p>
-          </section>
+            </ul>
+          </div>
         </div>
       </section>
 
-      <SectionContact />
+      <section
+        className="w-full flex flex-col items-center gap-4 bg-[#64AFCF] py-20 px-8"
+        id="PROJETOS RECENTES"
+      >
+        <div className="max-w-7xl flex flex-col gap-8 w-full">
+          <h1 className="font-bold text-5xl text-white text-center max-sm:text-3xl">
+            Projetos Recentes
+          </h1>
+
+          <div className="h-[400px] bg-white shadow-md rounded-lg w-full"></div>
+        </div>
+      </section>
+
+      <section
+        className="w-full flex flex-col items-center gap-4 bg-[#F8F8F8] text-white py-20 px-8"
+        id="solutions"
+      >
+        <div className="max-w-7xl flex flex-col gap-8" id="NOSSAS SOLUÇÕES">
+          <h1 className="font-bold text-5xl text-[#0A2E72] text-center max-sm:text-3xl">
+            Nossas soluções
+          </h1>
+
+          <div className="grid grid-cols-2 grid-rows-[10] max-md:grid-cols-2 max-sm:grid-cols-1 gap-y-2 gap-x-16">
+            {arrayCards.map((item, index) => (
+              <div
+                key={index}
+                className="bg-white shadow-large rounded-xl p-1 w-[400px] max-sm:w-full flex justify-between items-center px-6 "
+              >
+                <p className="text-[#050505]">{item.title}</p>
+
+                <Check className="w-5 h-5 text-green-500" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <BrandAnimation />
 
-      <Footer />
+      <SectionContact />
     </main>
   );
 }

@@ -28,15 +28,15 @@
 }
 
 .custom-shape-divider-bottom-1701619986 .shape-fill {
-  fill: #f8f8f8;
+  fill: #ffffff;
 }
 
 /** For tablet devices **/
 @media (max-width: 1023px) {
-    .custom-shape-divider-bottom-1701619986 svg {
-        width: calc(140% + 1.3px);
-        height: 52px;
-    }
+  .custom-shape-divider-bottom-1701619986 svg {
+    width: calc(140% + 1.3px);
+    height: 52px;
+  }
 }
 
 .footer {

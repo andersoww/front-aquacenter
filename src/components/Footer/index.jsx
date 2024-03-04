@@ -1,28 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-
-function NavigationContainer({ title, pathname }) {
-  return (
-    <div className="flex flex-col gap-8">
-      <h2 className="text-2xl font-semibold text-white">{title}</h2>
-      <ul className="gap-4 flex flex-col">
-        {pathname.map((item, index) => {
-          return (
-            <li key={index} className="text-white text-sm">
-              <Link href={item.path}>{item.name}</Link>
-            </li>
-          );
-        })}
-      </ul>
-    </div>
-  );
-}
+import { NavigationContainer } from "./NavigationContainer";
 
 export function Footer() {
   return (
     <>
       <footer className="flex bg-[#0a2e72] justify-center">
-        <div className="max-w-5xl w-full px-4 py-14 container bg-[url('/footer.png'),url('/footer.png')] max-md:bg-[url('/footer.png')] max-md:bg-cover flex justify-between items-center max-md:items-start max-md:flex-col max-md:gap-8 max-md:text-start">
+        <div className="max-w-7xl w-full px-4 py-14 container bg-[url('/footer.png'),url('/footer.png')] max-md:bg-[url('/footer.png')] max-md:bg-cover flex justify-between max-md:items-start max-md:flex-col max-md:gap-8 max-md:text-start">
           <div className="flex flex-col max-w-[300px] gap-6 max-md:items-start">
             <Image
               src="/logo.png"
@@ -31,65 +15,72 @@ export function Footer() {
               alt="logo"
               className="w-[200px] h-[50px] object-contain"
             />
-            <p className="text-sm text-left max-md:text-start text-white">
-              Lorem ipsum is placeholder text commonly used in the graphic,
-              print, and publishing industries mockups.
-            </p>
 
-            <div className="flex pt-4 gap-2 items-center">
-              <div className="p-2 border-2 border-[#90a9d8] rounded-full bg-[##163C86] hover:cursor-pointer flex items-center justify-center h-[40px] w-[40px]">
+            <div>
+              <p className="text-sm text-left max-md:text-start text-white">
+                Sempre buscamos tornar seus
+              </p>
+
+              <p className="text-sm text-left max-md:text-start text-white">
+                Sonhos em realidade!
+              </p>
+            </div>
+            <div className="flex gap-2 items-center">
+              <Link href="https://www.instagram.com/aquacenterbebedouro/">
                 <Image
                   width={40}
-                  height={30}
+                  height={40}
                   alt=""
                   className="object-contain"
-                  src="/instagram.svg"
+                  src="/instagram.png"
                 />
-              </div>
+              </Link>
 
-              <Image
-                width={50}
-                height={40}
-                alt=""
-                className="hover:cursor-pointer"
-                src="/facebook.svg"
-              />
+              <Link href="https://www.facebook.com/aquacenterbebedouro/?locale=pt_BR">
+                <Image
+                  width={40}
+                  height={40}
+                  alt=""
+                  className="hover:cursor-pointer"
+                  src="/facebook.png"
+                />
+              </Link>
             </div>
           </div>
 
-          <div className="flex gap-24 max-md:flex-col max-md:gap-6">
-            <NavigationContainer
-              title="Departments"
-              pathname={[
-                { name: "FAQ", path: "" },
-                { name: "Privacy Policy", path: "" },
-                { name: "Help", path: "" },
-                { name: "Contact", path: "" },
-                { name: "Contact", path: "" },
-              ]}
-            />
+          <NavigationContainer
+            title="Links Úteis"
+            pathname={[
+              { name: "Início", path: "home" },
+              { name: "Quem Somos", path: "aboutUs" },
+              { name: "Projetos Recentes", path: "PROJETOS RECENTES" },
+              { name: "Nossas Soluções", path: "solutions" },
+              { name: "Contatos", path: "contact" },
+              { name: "Quero um Orçamento", path: "" },
+            ]}
+          />
 
-            <NavigationContainer
-              title="Quick Links"
-              pathname={[
-                { name: "Men", path: "" },
-                { name: "Women", path: "" },
-                { name: "Kids", path: "" },
-                { name: "Shoes", path: "" },
-                { name: "Shoes", path: "" },
-              ]}
-            />
+          <div className="flex flex-col gap-4">
+            <h2 className="text-2xl font-semibold text-white">Loja</h2>
 
-            <NavigationContainer
-              title="Blog Post"
-              pathname={[
-                { name: "Men", path: "" },
-                { name: "Women", path: "" },
-                { name: "Kids", path: "" },
-                { name: "Shoes", path: "" },
-                { name: "Shoes", path: "" },
-              ]}
-            />
+            <div className="flex flex-col gap-4">
+              <p className="text-white text-sm max-sm:text-sm">
+                Venha fazer uma visita:
+              </p>
+              <p className="text-white text-sm max-sm:text-sm">
+                Av. Raul Furquim, 574 - Centro,
+              </p>
+              <p className="text-white text-sm max-sm:text-sm">
+                Bebedouro - SP / CEP: 14700-300
+              </p>
+              <p className="text-white text-sm max-sm:text-sm">Horários:</p>
+              <p className="text-white text-sm max-sm:text-sm">
+                Seg – sexta: 07h30 – 11h30 / 13h00 – 18h00
+              </p>
+              <p className="text-white text-sm max-sm:text-sm">
+                Sáb: 08h00 – 12h30
+              </p>
+            </div>
           </div>
         </div>
       </footer>

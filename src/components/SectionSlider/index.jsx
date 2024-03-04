@@ -1,17 +1,17 @@
 "use client";
 import { Button } from "@nextui-org/button";
 import Image from "next/image";
+import Link from "next/link";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import { ClientOnly } from "../ClientOnly";
-import Link from "next/link";
 
 export function SectionSlider() {
   return (
-    <section className="w-full relative" id="Home">
+    <section className="w-full relative" id="home">
       <div className="absolute flex flex-col mt-[360px] px-24 max-md:px-4 gap-4 z-40 w-full">
-        <h1 className="text-white font-bold text-4xl max-md:text-3xl w-[450px]">
-          Projetos de piscinas Profissionais, com os Melhores produtos!
+        <h1 className="text-white font-bold text-4xl max-md:text-3xl w-[450px] max-sm:w-full">
+          Projetos personalizados para sua piscina!
         </h1>
 
         <Link href="/budget">
