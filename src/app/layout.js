@@ -1,7 +1,8 @@
-import { NavBar } from "@/components/NavBar";
 import { Footer } from "@/components/Footer";
+import { NavBar } from "@/components/NavBar";
 import { Providers } from "@/components/Providers";
 import { Inter } from "next/font/google";
+import { WhatsApp } from "@/components/Whatsapp";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
           <NavBar />
           {children}
           <Footer />
+          <WhatsApp className="fixed bottom-4 right-2 w-16 h-16 hover:cursor-pointer" />
         </Providers>
       </body>
     </html>
