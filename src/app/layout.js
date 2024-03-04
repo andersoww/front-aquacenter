@@ -2,7 +2,7 @@ import { Footer } from "@/components/Footer";
 import { NavBar } from "@/components/NavBar";
 import { Providers } from "@/components/Providers";
 import { Inter } from "next/font/google";
-import { WhatsApp } from "@/components/Whatsapp";
+import { WhatsApp } from "@/components/WhatsApp";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
