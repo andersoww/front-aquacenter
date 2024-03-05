@@ -46,15 +46,15 @@ export default function Home() {
       <SectionSlider />
 
       <section
-        className="w-full flex justify-center bg-[#FFFFFF] py-20 px-8"
+        className="w-full flex justify-center bg-[#FFFFFF] px-8 pb-20"
         id="aboutUs"
       >
         <div className="max-w-7xl flex flex-col gap-8">
-          <h1 className="font-bold text-5xl text-[#0A2E72] text-center max-sm:text-3xl">
+          <h1 className="font-bold text-4xl text-[#0A2E72] text-center max-sm:text-3xl">
             Quem Somos
           </h1>
 
-          <h2 className="text-[#0A2E72] font-semibold text-2xl text-center max-sm:text-xl">
+          <h2 className="text-[#0A2E72] font-semibold text-xl text-center">
             Desde 1987 buscando transformar seu sonho em realidade.
           </h2>
 
@@ -163,24 +163,24 @@ export default function Home() {
         id="PROJETOS RECENTES"
       >
         <div className="max-w-7xl flex flex-col gap-8 w-full">
-          <h1 className="font-bold text-5xl text-white text-center max-sm:text-3xl">
+          <h1 className="font-bold text-4xl text-white text-center max-sm:text-3xl">
             Projetos Recentes
           </h1>
 
-          <div className="h-[400px] bg-white shadow-md rounded-lg w-full"></div>
+          <div className="h-[500px] bg-white shadow-md rounded-lg w-full"></div>
         </div>
       </section>
 
       <section
-        className="w-full flex flex-col items-center gap-4 bg-[#F8F8F8] text-white py-20 px-8"
+        className="w-full flex justify-center bg-[#F8F8F8] py-20 px-8"
         id="solutions"
       >
         <div className="max-w-7xl flex flex-col gap-8" id="NOSSAS SOLUÇÕES">
-          <h1 className="font-bold text-5xl text-[#0A2E72] text-center max-sm:text-3xl">
+          <h1 className="font-bold text-4xl text-[#0A2E72] text-center max-sm:text-3xl">
             Nossas soluções
           </h1>
 
-          <div className="grid grid-cols-2 grid-rows-[10] max-md:grid-cols-2 max-sm:grid-cols-1 gap-y-2 gap-x-16">
+          <div className="grid grid-cols-2 grid-rows-[10] max-md:grid-cols-2 max-sm:grid-cols-1 gap-y-3 gap-x-16">
             {arrayCards.map((item, index) => (
               <div
                 key={index}

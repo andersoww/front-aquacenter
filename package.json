@@ -15,12 +15,13 @@
     "@nextui-org/popover": "^2.1.14",
     "@nextui-org/system": "^2.0.15",
     "@nextui-org/theme": "^2.1.17",
-    "framer-motion": "^10.16.12",
+    "framer-motion": "^10.18.0",
     "lucide-react": "^0.344.0",
     "next": "14.0.3",
     "react": "^18",
     "react-dom": "^18",
-    "react-slideshow-image": "^4.3.0"
+    "react-slideshow-image": "^4.3.0",
+    "react-use-measure": "^2.1.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",

@@ -1,32 +1,11 @@
 "use client";
 import Image from "next/image";
-import { useCallback, useEffect, useMemo, useRef } from "react";
+import { useMemo, useEffect, useState } from "react";
+import { animate, motion, useMotionValue } from "framer-motion";
+import useMeasure from "react-use-measure";
+import { ClientOnly } from "../ClientOnly";
 
 export function BrandAnimation() {
-  const scroller = useRef(null);
-  const scrollerInner = useRef(null);
-
-  const addAnimation = useCallback(() => {
-    const scrollerList = Array.from(scroller.current.children);
-    const scrollerContent = Array.from(scrollerInner.current.children);
-
-    scrollerList.forEach((item) => {
-      scroller.current.setAttribute("data-animated", true);
-
-      scrollerContent.forEach((item) => {
-        const duplicatedItem = item.cloneNode(true);
-        duplicatedItem.setAttribute("aria-hidden", true);
-        scrollerInner.current.appendChild(duplicatedItem);
-      });
-    });
-  }, []);
-
-  useEffect(() => {
-    if (scroller.current && scrollerInner.current) {
-      addAnimation();
-    }
-  }, [scroller, scrollerInner, addAnimation]);
-
   const brands = useMemo(
     () => [
       { path: "/discord.svg" },
@@ -45,24 +24,78 @@ export function BrandAnimation() {
     []
   );
 
+  const FAST_DURATION = 25;
+  const SLOW_DURATION = 75;
+
+  const [duration, setDuration] = useState(FAST_DURATION);
+  let [ref, { width }] = useMeasure();
+
+  const xTranslation = useMotionValue(0);
+
+  const [mustFinish, setMustFinish] = useState(false);
+  const [rerender, setRerender] = useState(false);
+
+  useEffect(() => {
+    let controls;
+    let finalPosition = -width / 2 - 8;
+
+    if (mustFinish) {
+      controls = animate(xTranslation, [xTranslation.get(), finalPosition], {
+        ease: "linear",
+        duration: duration * (1 - xTranslation.get() / finalPosition),
+        onComplete: () => {
+          setMustFinish(false);
+          setRerender(!rerender);
+        },
+      });
+    } else {
+      controls = animate(xTranslation, [0, finalPosition], {
+        ease: "linear",
+        duration: duration,
+        repeat: Infinity,
+        repeatType: "loop",
+        repeatDelay: 0,
+      });
+    }
+
+    return controls?.stop;
+  }, [rerender, xTranslation, duration, width, mustFinish]);
+
   return (
-    <section className="w-full justify-center py-20 flex flex-col items-center gap-4 px-8">
-      <h1 className="font-bold text-5xl text-[#0A2E72] text-center max-sm:text-3xl">
-        Marcas e Parceiros
-      </h1>
-      <div className="scroller" ref={scroller}>
-        <ul
-          className="tag-list scroller__inner flex items-center"
-          ref={scrollerInner}
-        >
-          {brands.map((item, index) => {
-            return (
-              <li key={index}>
-                <Image src={item.path} alt="" width={100} height={50} />
-              </li>
-            );
-          })}
-        </ul>
+    <section className="w-full justify-center py-20 flex gap-8 px-8">
+      <div className="w-full max-w-7xl scroll">
+        <h1 className="font-bold text-4xl text-[#0A2E72] text-center max-sm:text-3xl">
+          Marcas e Parceiros
+        </h1>
+
+        <ClientOnly>
+          <motion.div
+            className="flex mt-10"
+            style={{ x: xTranslation }}
+            ref={ref}
+            onHoverStart={() => {
+              setMustFinish(true);
+              setDuration(SLOW_DURATION);
+            }}
+            onHoverEnd={() => {
+              setMustFinish(true);
+              setDuration(FAST_DURATION);
+            }}
+          >
+            {brands.map((item, index) => {
+              return (
+                <Image
+                  key={index}
+                  src={item.path}
+                  alt=""
+                  width={100}
+                  height={250}
+                  className="h-[100px] min-w-[250px] object-contain"
+                />
+              );
+            })}
+          </motion.div>
+        </ClientOnly>
       </div>
     </section>
   );
