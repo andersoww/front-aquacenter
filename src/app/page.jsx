@@ -82,6 +82,7 @@ export default function Home() {
                 alt=""
                 width={200}
                 height={200}
+                priority
                 className="w-full h-[380px] object-cover"
               />
             </div>
@@ -94,6 +95,7 @@ export default function Home() {
                 alt=""
                 width={200}
                 height={200}
+                priority
                 className="w-full h-[400px] object-cover"
               />
             </div>
