@@ -80,8 +80,8 @@ export default function Home() {
               <Image
                 src="/aboutUs/1.jpg"
                 alt=""
-                width={200}
-                height={200}
+                width={730}
+                height={380}
                 priority
                 className="w-full h-[380px] object-cover"
               />
@@ -93,8 +93,8 @@ export default function Home() {
               <Image
                 src="/aboutUs/2.jpg"
                 alt=""
-                width={200}
-                height={200}
+                width={730}
+                height={380}
                 priority
                 className="w-full h-[400px] object-cover"
               />
