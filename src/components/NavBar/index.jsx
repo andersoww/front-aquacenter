@@ -11,16 +11,21 @@ export function NavBar() {
   const path = usePathname();
 
   return (
-    <header className="flex justify-between max-md:justify-center items-center bg-[#C23336] w-full h-[75px] fixed top-0 z-50 pl-[100px] max-md:pl-[40px] gap-4">
+    <header className={clsx("flex justify-between max-md:justify-center items-center bg-[#C23336] w-full h-[75px] fixed top-0 z-50 max-md:pl-[40px] gap-4", {
+      'px-8': path === '/budget',
+      'pl-[100px]': path !== '/budget'
+    })}>
       <div className="absolute left-12 md:hidden">
         <PopoverMenuNavBar />
       </div>
 
       <Link href="/">
-        <Image src="/logo.png" width={200} height={100} alt=""  />
+        <Image src="/logo.png" width={200} height={100} alt="" />
       </Link>
 
-      <ButtonGroup className="text-[#F9F9F9] flex justify-end ml-auto max-[1100px]:hidden">
+      <ButtonGroup className={clsx("text-[#F9F9F9] flex justify-end max-[1100px]:hidden", {
+        'ml-auto': path !== '/budget'
+      })}>
         {[
           { title: "INÍCIO", href: "home" },
           { title: "QUEM SOMOS", href: "aboutUs" },
@@ -44,6 +49,33 @@ export function NavBar() {
           );
         })}
       </ButtonGroup>
+
+
+      {path === '/budget' && (
+        <div className="flex gap-2 items-center">
+          <Link href="https://www.instagram.com/aquacenterbebedouro/">
+            <Image
+              width={30}
+              height={30}
+              alt=""
+              className="object-contain"
+              src="/instagram.png"
+            />
+          </Link>
+
+          <Link href="https://www.facebook.com/aquacenterbebedouro/?locale=pt_BR">
+            <Image
+              width={30}
+              height={30}
+              alt=""
+              className="hover:cursor-pointer"
+              src="/facebook.png"
+            />
+          </Link>
+        </div>
+      )}
+
+
       <div
         className={clsx(
           "relative w-4/12 h-full max-[1100px]:w-1/2 max-md:hidden",
