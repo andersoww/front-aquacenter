@@ -1,10 +1,22 @@
 import { BrandAnimation } from "@/components/BrandAnimation";
 import { SectionContact } from "@/components/SectionContact";
 import { SectionSlider } from "@/components/SectionSlider";
+import { useServer } from "@/utils/useServer";
 import { Check, CheckCircle } from "lucide-react";
 import Image from "next/image";
 
-export default function Home() {
+
+
+async function Photos() {
+  const token = process.env.NEXT_PUBLIC_TOKEN_INSTAGRAM || ''
+  const response = await useServer({ pathname: "me/media", query: [{ name: 'fields', value: 'media_url,media_type,caption,permalink' }, { name: 'access_token', value: token }] })
+
+  return response.data
+}
+export default async function Home() {
+  const photos = await Photos()
+
+
   const arrayCards = [
     {
       title: "Construção de piscina de vinil",
@@ -169,7 +181,14 @@ export default function Home() {
             Projetos Recentes
           </h1>
 
-          <div className="h-[500px] bg-white shadow-md rounded-lg w-full"></div>
+          <div className="h-full bg-white shadow-lg rounded-lg w-full grid grid-cols-6 p-2 gap-3">
+            {photos.length > 0 && photos?.slice(0,23).map((item,index) => {
+              if (item.media_type === "IMAGE")
+                return (
+                  <Image src={item.media_url} alt="" width={800} height={800} key={index} className="object-cover w-full h-[200px] col-span-1 max-md:col-span-3 max-sm:col-span-full" />
+                )
+            })}
+          </div>
         </div>
       </section>
 

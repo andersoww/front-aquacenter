@@ -28,8 +28,8 @@ export function BrandAnimation() {
     { path: "/brands/bordapool.jpg" },
     { path: "/brands/solis.png" },
     { path: "/brands/tholz.png" },
-    // { path: "/brands/texius.png" },
-    // { path: "/brands/viasol.png" },
+    { path: "/brands/texius.png" },
+    { path: "/brands/viasol.png" },
   ]
 
   return (
