@@ -8,6 +8,9 @@ import { ClientOnly } from "../ClientOnly";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export function SectionSlider() {
+
+  const images = ['1', '2', '3', '4']
+
   return (
     <section className="w-full relative justify-center flex" id="home">
       <div className="w-full max-2xl:max-w-full max-w-7xl">
@@ -17,7 +20,7 @@ export function SectionSlider() {
           </h1>
 
           <Link href="/budget">
-            <Button className="rounded-3xl bg-[#64AFCF] flex justify-center items-center text-[#F9F9F9] px-[22px] py-4 w-[250px] font-bold">
+            <Button className="flex justify-center items-center text-[#F9F9F9] px-[22px] py-4 w-[250px] font-bold bg-transparent text-md">
               Faça seu orçamento aqui!
             </Button>
           </Link>
@@ -28,7 +31,7 @@ export function SectionSlider() {
             <Image
               src="/FOTO_01.jpg"
               alt=""
-              width={500}
+              width={4000}
               height={500}
               className="w-full h-[700px] object-cover"
             />
@@ -38,15 +41,17 @@ export function SectionSlider() {
             prevArrow={<ChevronLeft className="text-white w-10 h-10" />}
             nextArrow={<ChevronRight className="text-white w-10 h-10" />}
           >
-            <div className="each-slide-effect">
-              <Image
-                src="/FOTO_01.jpg"
-                alt=""
-                width={4000}
-                height={500}
-                className="h-[700px] object-cover"
-              />
-            </div>
+            {images.map((img,index) => (
+              <div className="each-slide-effect" key={index}>
+                <Image
+                  src={`/slider/${img}.jpg`}
+                  alt=""
+                  width={500}
+                  height={500}
+                  className="h-[700px] object-cover w-full"
+                />
+              </div>
+            ))}
           </Slide>
         </ClientOnly>
 

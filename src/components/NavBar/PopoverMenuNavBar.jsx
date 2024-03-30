@@ -2,9 +2,13 @@
 import { useState } from "react";
 import { SmoothScroll } from "@/utils/SmoothScroll";
 import { Popover, PopoverContent, PopoverTrigger } from "@nextui-org/popover";
+import { usePathname } from "next/navigation";
 
 export function PopoverMenuNavBar() {
   const [isOpen, setIsOpen] = useState(false);
+
+  const path = usePathname();
+
   return (
     <Popover placement={"bottom"} isOpen={isOpen}>
       <PopoverTrigger onClick={() => setIsOpen(true)}>
@@ -15,19 +19,25 @@ export function PopoverMenuNavBar() {
         </div>
       </PopoverTrigger>
       <PopoverContent className="bg-[#E3E3E3] w-[200px] flex flex-col rounded-md gap-2 p-2 ml-8">
-        {["Home", "Quem Somos", "Serviços", "Redes sociais", "Contato"].map(
+        {[{ title: "INÍCIO", href: "home" },
+        { title: "QUEM SOMOS", href: "aboutUs" },
+        { title: "PROJETOS RECENTES", href: "projects" },
+        { title: "NOSSAS SOLUÇÕES", href: "solutions" },
+        { title: "CONTATO", href: "contact" },].map(
           (head, index) => {
             return (
               <a
                 key={index}
+                href={`/#${head.href}`}
                 onClick={(e) => {
-                  setIsOpen(false);
-                  SmoothScroll(e);
+                  if (path === "/") {
+                    setIsOpen(false)
+                    SmoothScroll(e);
+                  }
                 }}
-                href={`#${head}`}
                 className="flex w-full hover:bg-neutral-400/80 duration-200 rounded-md p-2"
               >
-                {head}
+                {head.title}
               </a>
             );
           }

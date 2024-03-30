@@ -28,8 +28,8 @@ export function Footer() {
             <div className="flex gap-2 items-center">
               <Link href="https://www.instagram.com/aquacenterbebedouro/">
                 <Image
-                  width={40}
-                  height={40}
+                  width={30}
+                  height={30}
                   alt=""
                   className="object-contain"
                   src="/instagram.png"
@@ -38,8 +38,8 @@ export function Footer() {
 
               <Link href="https://www.facebook.com/aquacenterbebedouro/?locale=pt_BR">
                 <Image
-                  width={40}
-                  height={40}
+                  width={30}
+                  height={30}
                   alt=""
                   className="hover:cursor-pointer"
                   src="/facebook.png"
@@ -85,7 +85,13 @@ export function Footer() {
         </div>
       </footer>
       <div className="copyrightText">
-        <p>Copyright 2023 All Rights Reserved.</p>
+        <p>© Todos os direitos reservados - 2024 - desenvolvido por {""}
+          <span className="hover:cursor-pointer hover:underline font-bold">
+            <Link href="https://guidesign.com.br/">
+              GUIdesign
+            </Link>
+          </span>
+          .</p>
       </div>
     </>
   );

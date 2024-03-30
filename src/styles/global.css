@@ -6,6 +6,7 @@
   top: 260px;
   margin-left: 30px;
 }
+
 .react-slideshow-container .nav:last-of-type {
   top: 260px;
   margin-right: 30px;
@@ -90,17 +91,6 @@
   margin-right: 30px;
 }
 
-.scroll {
-  overflow: hidden;
-  -webkit-mask: linear-gradient(
-    90deg,
-    transparent,
-    white 20%,
-    white 80%,
-    transparent
-  );
-  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
-}
 
 .polygon {
   clip-path: polygon(100% 0%, 100% 10%, 100% 100%, 0 99%, 5% 48%, 0 0);

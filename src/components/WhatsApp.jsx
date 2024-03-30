@@ -7,6 +7,7 @@ function WhatsApp({ className }) {
       href={
         "https://api.whatsapp.com/send/?phone=5517997113532&text&type=phone_number&app_absent=0"
       }
+      className="z-50 absolute"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

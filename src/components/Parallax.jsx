@@ -25,7 +25,10 @@ export function Parallax({ children, baseVelocity = 100 }) {
 
   const x = useTransform(baseX, (v) => `${wrap(-20, -45, v)}%`);
 
+
+
   const directionFactor = useRef(1);
+
   useAnimationFrame((t, delta) => {
     let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
 
@@ -47,6 +50,7 @@ export function Parallax({ children, baseVelocity = 100 }) {
         <span>{children}</span>
         <span>{children}</span>
         <span>{children}</span>
+
       </motion.div>
     </div>
   );

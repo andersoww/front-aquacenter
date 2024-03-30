@@ -46,7 +46,7 @@ export default function Home() {
       <SectionSlider />
 
       <section
-        className="w-full flex justify-center bg-[#FFFFFF] px-8 pb-20"
+        className="w-full flex justify-center bg-[#FFFFFF] py-20 px-8"
         id="aboutUs"
       >
         <div className="max-w-7xl flex flex-col gap-8">
@@ -78,7 +78,7 @@ export default function Home() {
 
             <div className="overflow-hidden rounded-xl w-full">
               <Image
-                src="/FOTO_01.jpg"
+                src="/aboutUs/1.jpg"
                 alt=""
                 width={200}
                 height={200}
@@ -90,7 +90,7 @@ export default function Home() {
           <div className="flex gap-6 w-full items-start max-sm:flex-col">
             <div className="overflow-hidden rounded-xl w-[60%] max-sm:w-full">
               <Image
-                src="/FOTO_01.jpg"
+                src="/aboutUs/2.jpg"
                 alt=""
                 width={200}
                 height={200}
@@ -160,7 +160,7 @@ export default function Home() {
 
       <section
         className="w-full flex flex-col items-center gap-4 bg-[#64AFCF] py-20 px-8"
-        id="PROJETOS RECENTES"
+        id="projects"
       >
         <div className="max-w-7xl flex flex-col gap-8 w-full">
           <h1 className="font-bold text-4xl text-white text-center max-sm:text-3xl">

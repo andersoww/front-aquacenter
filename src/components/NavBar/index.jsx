@@ -17,14 +17,14 @@ export function NavBar() {
       </div>
 
       <Link href="/">
-        <Image src="/logo.png" width={200} height={100} alt="" className="" />
+        <Image src="/logo.png" width={200} height={100} alt=""  />
       </Link>
 
       <ButtonGroup className="text-[#F9F9F9] flex justify-end ml-auto max-[1100px]:hidden">
         {[
           { title: "INÍCIO", href: "home" },
           { title: "QUEM SOMOS", href: "aboutUs" },
-          { title: "PROJETOS RECENTES", href: "home" },
+          { title: "PROJETOS RECENTES", href: "projects" },
           { title: "NOSSAS SOLUÇÕES", href: "solutions" },
           { title: "CONTATO", href: "contact" },
         ].map((head, index) => {
@@ -60,8 +60,8 @@ export function NavBar() {
           <div className="flex gap-2 items-center">
             <Link href="https://www.instagram.com/aquacenterbebedouro/">
               <Image
-                width={40}
-                height={40}
+                width={30}
+                height={30}
                 alt=""
                 className="object-contain"
                 src="/instagram.png"
@@ -70,8 +70,8 @@ export function NavBar() {
 
             <Link href="https://www.facebook.com/aquacenterbebedouro/?locale=pt_BR">
               <Image
-                width={40}
-                height={40}
+                width={30}
+                height={30}
                 alt=""
                 className="hover:cursor-pointer"
                 src="/facebook.png"

@@ -2,8 +2,8 @@ import { ClientOnly } from "@/components/ClientOnly";
 
 function Geolocation() {
   return (
-    <ClientOnly>
-      <div className="w-3/5 max-sm:w-full h-[400px] rounded-3xl bg-white p-1 overflow-hidden">
+    <ClientOnly fallback={<div className="w-3/5 max-sm:w-full h-[400px] rounded-3xl bg-zinc-300 animate-pulse" />}>
+      <div className="w-3/5 max-sm:w-full h-[400px] rounded-3xl bg-white overflow-hidden">
         <iframe
           width="100%"
           height="100%"
